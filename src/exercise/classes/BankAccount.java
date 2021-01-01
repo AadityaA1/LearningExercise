@@ -8,6 +8,27 @@ public class BankAccount {
 	private String email;
 	private String phoneNumber;
 
+	public BankAccount() {
+		// to set default values
+		// call to [this] should be first line in constuctor
+		// call to the accounts constructor with parameters
+		this("A8888", 12000.33, "Default Name", "default@default.com", "default phone");
+
+		System.out.println("Empty Constructor");
+	}
+
+	public BankAccount(String accountNumber, double balance, String customerName, String email, String phoneNumber) {
+		System.out.println("Account constructor with parameters");
+		this.accountNumber = accountNumber;
+		this.balance = balance;
+		this.customerName = customerName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+
+		// best practice - in constructor dont call the setters, instead use as above
+		// save field values directly as above
+	}
+
 	public String getAccountNumber() {
 		return accountNumber;
 	}
@@ -68,6 +89,10 @@ public class BankAccount {
 		axisAccount.depositFunds(100);
 		axisAccount.withDrawFunds(99);
 		axisAccount.withDrawFunds(1.5);
+
+		BankAccount hdfcAccount = new BankAccount("A763739", 121.99, "John Smith", "johns@s.com", "+988-837-83737");
+		hdfcAccount.depositFunds(200);
+		hdfcAccount.withDrawFunds(100);
 
 	}
 
