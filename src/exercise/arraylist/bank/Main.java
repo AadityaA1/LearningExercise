@@ -1,5 +1,7 @@
 package exercise.arraylist.bank;
 
+import java.util.LinkedList;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -15,6 +17,15 @@ public class Main {
 
 		bank.listCustomers("Adelaide", true);
 		bank.listCustomers("Adelaide", false);
+
+		String a = "nifty";
+		a.getClass().getSimpleName();
+
+		LinkedList<Integer> list = new LinkedList<>();
+		list.add(5);
+		list.add(1);
+		list.add(100);
+		System.out.println(list);
 
 	}
 
